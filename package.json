@@ -9,6 +9,7 @@
     "@utils": "",
     "lint": "next lint",
     "lint:fix": "eslint --fix --ext .ts,.tsx .",
+    "img:convert": "node convert-images",
     "@automatisation": "",
     "prepare": "husky install",
     "preinstall": "npx only-allow yarn",
@@ -45,6 +46,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
-    "sass": "^1.63.3"
+    "sass": "^1.63.3",
+    "webp-converter": "^2.3.3"
   }
 }
