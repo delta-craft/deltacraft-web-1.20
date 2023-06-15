@@ -28,24 +28,20 @@ const LINKS = [
 const LandingJumbo: React.FC = () => {
   return (
     <Box
-      sx={{
-        width: "100vw",
+      sx={theme => ({
         overflow: "hidden",
         userSelect: "none",
-        "& img": {
-          position: "absolute",
-          inset: 0,
-          height: `100%`,
-          width: "100vw",
-          // disable select
+        height: `calc(100svh - ${64}px)`,
+        [theme.breakpoints.down("md")]: {
+          height: `calc(100svh - ${56}px)`,
         },
+        backgroundImage: "url(/images/2023-06-15_13.48.42.png.webp)",
         "& .content": {
           position: "absolute",
           inset: 0,
         },
-      }}
+      })}
     >
-      <img src="/images/2023-06-15_13.48.42.png.webp" alt="" decoding="async" />
       <Box sx={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,.6)" }} />
       <Box
         className="content"
@@ -57,7 +53,15 @@ const LandingJumbo: React.FC = () => {
           gap: 2,
         }}
       >
-        <Typography variant="h1" fontWeight="bold">
+        <Typography
+          variant="h1"
+          fontWeight="bold"
+          sx={theme => ({
+            [theme.breakpoints.down("md")]: {
+              fontSize: 48,
+            },
+          })}
+        >
           DeltaCraft
         </Typography>
 
